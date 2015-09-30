@@ -16,7 +16,9 @@ As we have seen in earlier modules, we will add a reference to a content deliver
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
 ```
 
-Next, we need to modify our existing app.js file to create a new AngularJS module. We're to call this angularApp, but you could call it whatever you want. Let's put the following line of code at the top of your app.js file.
+Next, we need to modify our existing app.js file to create a new AngularJS module. What is an AngularJS Module? You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.
+
+We're to call this angularApp, but you could call it whatever you want. Let's put the following line of code at the top of your app.js file.
 
 ```Javascript
 var app = angular.module("angularApp", []);
@@ -114,7 +116,7 @@ Let's do that now. Make an additional folder for "scripts" and move the app.js a
 Up until now, it wasn't a big deal because there was only one javascript file, one css file and one html page. Consider how many files we would have if we had downloaded the bootstrap, jquery and AngularJS files to our local machine. It gets messy very quickly.
 
 ###Taking AngularJS farther
-One of the other keys to a framework like AngularJS being so popular is that it takes little to now code to do what is called "data binding". Earlier, we put a textbox on the page that when the user clicked "submit" a message would warn them if the number wasn't valid. We had to have code that would find the control, get the number and then make a check, the find the element where we wanted to put the message and replace the text. With binding that goes away and we can assign the value as the data is entered, make the check and assign the message all using the controller *$scope*
+One of the other keys to a framework like AngularJS being so popular is that it takes little to no code to do what is called "data binding". Earlier, we put a textbox on the page that when the user clicked "submit" a message would warn them if the number wasn't valid. We had to have code that would find the control, get the number and then make a check, then find the element where we wanted to put the message and replace the text. With binding that goes away and we can assign the value as the data is entered, make the check and assign the message all using the controller *$scope*
 
 Let's do that now.
 
