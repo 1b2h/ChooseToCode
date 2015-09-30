@@ -64,7 +64,7 @@ In the case of the "fullName" function, no modifications to the private variable
 
 ###Wire Up the Model in HTML
 
-Let's turn back now to the HTML and connect up the model that we just added to our controller. We're going to use the "ng-model" attribute to connect each input, but notice that it is we use "User.firstName". That dot in the is telling the code to use the firstName value of the User object. We will also add the "ng-model-options" and set to `"{ getterSetter: true }"` which tells AngularJS that we are using functions for getting the value and setting the value. This is because we could use javascript someone else on the page to update the User object.
+Let's turn back now to the HTML and connect up the model that we just added to our controller. We're going to use the "ng-model" attribute to connect each input, but notice that it is we use "User.firstName". That dot in the is telling the code to use the firstName value of the User object. We will also add the "ng-model-options" and set to `"{ getterSetter: true }"` which tells AngularJS that we are using functions for getting the value and setting the value. This is because we could use javascript somewhere else on the page to update the User object.
 
 ```HTML
 <div class="row">
@@ -84,7 +84,7 @@ Let's turn back now to the HTML and connect up the model that we just added to o
 
 Save and load the "index.html" page in your browser. Notice that as you enter values in the FirstName and LastName textbox, the span below for FullName is automatically updated.
 
-This is just a simple of example of the binding that you can do, but imaging if you had a shopping cart where you could calculate the new price or the total as soon as the values were entered into the text box. Again, we are relying on the AngularJS framework to do the user interface manipulations for us so we don't have to write all the code to handle all of the updates.
+This is just a simple of example of the binding that you can do, but imagine if you had a shopping cart where you could calculate the new price or the total as soon as the values were entered into the text box. Again, we are relying on the AngularJS framework to do the user interface manipulations for us so we don't have to write all the code to handle all of the updates.
 
 ###Dynamic Page Content
 Finally, let's turn our attention to dynamic page content. Most websites that are popular have content that is refreshed on a regular basis. The content that we have created so far is static to your page. If you wanted to update the content, you would have to edit and republish the page.
