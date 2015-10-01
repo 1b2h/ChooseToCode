@@ -1,4 +1,4 @@
-﻿##Module 10: Going Deeper with Angular
+﻿##Module 10: Diving Deeper into AngularJS
 
 ###Objectives:
 - Two Way Binding
