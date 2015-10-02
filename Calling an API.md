@@ -1,4 +1,4 @@
-﻿##Module 8: Calling an API
+﻿##Using jQuery to retrieve information from other websites
 
 ###Objectives
 - JQuery to simplify interactions
@@ -10,8 +10,9 @@ In the last module we spent time going over JavaScript to add interactivity to y
 
 In this module we want to introduce a library for JavaScript called JQuery. JQuery is a set of JavaScript functions code that allow you to interact with your content in a very simple way. First let's add JQuery to our web page, and then we will look at what it can do.
 
-Open up your "index.html" file and add the "jquery-1.10.2.js" line to the \<head> portion of your web page.
+Open up your **index.html** file and add the "jquery-1.10.2.js" line to the \<head> portion of your web page.
 
+<!-- mark: 7 -->
 ```html
 <html>
 
@@ -63,12 +64,12 @@ function checkNumber() {
     $('#numberMessage').text(theMessage);
 }
 ```
-Notice we have something new in our code...the '$'. This is actually represents all of the code that was loaded by the jQuery library. Next, inside the parenthesis, we use the same approach that we use in CSS for selecting an HTML Element. '#' for an ID, '.' for a class or just that tag name for a tag. In other words, `$(#smallnumber)` means "select the element with an ID of 'smallnumber'". 
+Notice we have something new in our code...the '$'. This actually represents all of the code that was loaded by the jQuery library. Next, inside the parenthesis, we use the same approach that we use in CSS for selecting an HTML Element. '#' for an ID, '.' for a class or just that tag name for a tag. In other words, `$(#smallnumber)` means "select the element with an ID of 'smallnumber'". 
 
-Now, don't be confused but it is **NOT** the same thing as `document.getElementById("smallnumber")`. Notice, that you have to use the jQuery `val()` function and not the javascript `value` function. If you are going to use jQuery to modify the document, then you should *always* use jQuery. Don't switch back and forth...it's confusing to you (and potentially other developers you are working with).
+Now, don't be confused but it is **NOT** the same thing as `document.getElementById("smallnumber")`. Notice, that you have to use the jQuery `val()` function and not the javascript `value` function. If you are going to use jQuery to modify the document, then you should *always* use jQuery. Don't switch back and forth...it will get confusing for you (and potentially other developers you are working with).
 
 ###Getting content from another website
-Great, now that we have a handle on how jQuery is going to help us, we are going to use a very useful function for calling other websites. There is lots of great information out on the website that we can take advantage of. For example, weather is one of those things that there are sensors all over that we can ask for the temperature.
+Great, now that we have a handle on how jQuery is going to help us, we are going to use a very useful function for calling other websites. There is lots of great information out on the internet that we can take advantage of. For example, weather is one of those things that there are sensors all over the world that we can ask for the current temperature.
 
 Programmers expose this information through an API or an "Application Programming Interface". Sometimes, you will get this information for free, sometimes you will have to sign up and pay a fee. Everything from weather, to mapping, sending text messages to a phone, to stock market prices...you name it, there is probably an API for you to take advantage of.
 
@@ -97,6 +98,7 @@ Now we need to add some JavaScript to our app.js file. In this script, we are de
 
 When this function is complete, the ".done" function will run and jQuery will replace the contents on the paragraph tags with the HTML that comes back from the API.
 
+<!-- mark: 4 - 6 -->
 ```javascript
 function getAPIBadge() {
     var ctcAPI = "http://ChooseToCodeAPI.azurewebsites.net/api/values/";
