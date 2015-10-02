@@ -1,4 +1,4 @@
-﻿#Module X: Publishing a Web App
+﻿#Publishing a Web App to Azure
 
 ###Objectives:
 - Publish a simple web page
